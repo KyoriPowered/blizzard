@@ -33,7 +33,7 @@ import java.lang.annotation.Target;
  * The element decorated with this annotation is guaranteed to never have a {@code null} value.
  */
 @Documented
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 @Target({ElementType.ANNOTATION_TYPE, ElementType.FIELD, ElementType.LOCAL_VARIABLE, ElementType.METHOD, ElementType.PARAMETER, ElementType.TYPE_PARAMETER, ElementType.TYPE_USE})
 public @interface NonNull {
 }

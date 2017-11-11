@@ -35,7 +35,7 @@ import java.lang.annotation.Target;
  * <p>An immutable class is one where the state cannot be <em>seen</em> to change.</p>
  */
 @Documented
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)
 public @interface Immutable {
 }
