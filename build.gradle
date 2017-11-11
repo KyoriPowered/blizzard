@@ -53,6 +53,8 @@ jar {
 
 if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePassword')) {
   uploadArchives {
+    enabled = System.getenv('TRAVIS') == null || project.version.endsWith('-SNAPSHOT')
+
     repositories {
       mavenDeployer {
         beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
